@@ -29,6 +29,9 @@
 - v-if 和 v-for 不能同时在同一个标签中使用
     + v-for 中的 `:key`，绑定的必须是简单数据类型(Number/String/Boolean)
 
+- table
+    + `show-overflow-tooltip`写在el-table-column中，无需进行额外的操作，顶多设置一下width罢了，
+
 
 ### 关于eslint
 - 去除eslint的报错 (defined but never use)，两种方式，
@@ -44,3 +47,4 @@
     + 在`babelrc`中，`presets`中添加上'stage-2'才ok. **当然记得要npm安装babel-preset-stage-2**
 
 
+### 模块 - 培训管理
