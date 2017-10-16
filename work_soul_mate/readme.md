@@ -4,6 +4,6 @@ what I wanna do today - 2017/10/16
     + cloud-home 
     + cloud-app 
     + bikeItem
-- sublime [to](../sublime)
-- vscode  [to](../vscode)
+- sublime [to](../sublime/index.md)
+- vscode  [to](../vscode/index.md)
 - chrome
