@@ -1,8 +1,8 @@
 ## 在这里放一些路七八糟的东西啦
 
 
-- [x] 我的失业间歇 `loser33days.md`
-- [x] es6学习小记录 `es6blog.md`
+- [x] 我的失业间歇 [传送门](es6blog.md)
+- [x] es6学习小记录 [传送门](loser33days.md)
 
 ### soul_mate project
  - [ ] cloud-home [传送门](work_soul_mate/cloud_home/index.md)
