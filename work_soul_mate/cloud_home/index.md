@@ -42,3 +42,5 @@
 ### 关于babel
 - `...`功能, eg: `...mapGetters`,并不是es6提供的，而是babel提供的
     + 在`babelrc`中，`presets`中添加上'stage-2'才ok. **当然记得要npm安装babel-preset-stage-2**
+
+
