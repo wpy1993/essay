@@ -1,0 +1,127 @@
+## 标签一览
+
+- a `flow content`
+  - `href` `download` `hreflang` `ping` `referrerpolicy` `rel` `target` `type`
+- abbr `flow content` `必须有title`
+- address `类似em，放置在section的footer里面，相关的（否则用p）联系信息`
+- area `flow content` `必须放置在map中，在图片上定义一个热点区域用`
+  - `alt` `coords` `download` `href` `hreflang` `name` `media` `referrerpolicy` `rel` `shape` `target`
+- article `flow content` `里面需要有h1~h6`
+- aside `配合article使用，放置在里面，可以包含p标签`
+- audio 
+  - `autoplay` `buffered` `controls` `loop` `muted` `played` `preload` `src` `volume`
+
+- b `加粗`
+- base `metadata` `only one` `omission tag`
+  - `href` `target: _self _blank _parent _top`
+- bdi `=== span + css:unicode-bidi: isolate` `改变指定文本的顺序` **貌似是与父元素相反的顺序，父元素有dir="ltr/rtl"控制文本的顺序**
+- bdo `选定文本的顺序` **left还是tfel**
+  - `dir`: `ltr(left to right)` `rtl(right to left)`
+- blockquote
+- body
+- br
+- button
+- canvas
+- caption
+- cite
+- code
+- col
+- colgroup
+- content
+
+- data
+- datalist
+- dd
+- del
+- details
+- dfn
+- dialog
+- div
+- dl
+- dt
+
+- em
+- embed
+- fieldset
+- figcaption
+- figure
+- footer
+- form
+- h1 ~ h6 `but the font-size?`
+- head
+- header
+- hr
+- html
+
+- i
+- iframe
+- img
+- input
+- ins
+- kbd
+- keygen
+- label
+- legend
+- li
+- link
+- main
+- map
+- mark
+- menu
+- menuitem
+- meta
+- meter
+- nav
+- noscript
+
+- object
+- ol
+- optgroup
+- option
+- output
+- p
+- param
+- picture
+- pre
+- progress
+- q
+- rp
+- rt
+- rtc
+- ruby
+
+- s
+- samp
+- script
+- section
+- select
+- shadow
+- slot
+- small
+- source
+- span
+- strong
+- style
+- sub
+- summary
+- sup
+
+- table
+- tbody
+- td
+- template
+- textarea
+- tfoot
+- th
+- thead
+- time
+- title
+- tr
+- track
+
+- u
+- ul
+- var
+- video
+- wbr
+- xmp
