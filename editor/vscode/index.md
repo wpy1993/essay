@@ -30,4 +30,8 @@
     - 最初问题，因为css部分，stylus会因为tab和space并存而选择其中之一，并且在发现不同后，不再继续渲染css，这就尴尬了
     - 所以使用vscode敲代码，记得打开`view -> toggle Render Whitespace`,**重要**
  
+  - 允许shell使用code指令
+    - `command + shift + p`  输入 `shell command: install shell 'code' command in path`
+    - 然后就可以在terminal中使用`code .` 指令，使用vscode打开当前文件夹了
+
 
