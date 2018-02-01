@@ -16,5 +16,55 @@
 
 ### JSX
 
-- top, left, right, bottom, 这些是可以直接使用的，不一定需要position
+- top, left, right, bottom, 这些是可以直接使用的，不一定需要position(额，现在看看，貌似并非如此)
 - Text 不知道border，也不报错。。。
+
+### 数据传递
+
+> 使用this.route(假设在SRNPage页面)，或者SRNNative
+
+- this.route.open(url, params) / SRNNative.open(同上)
+    - 粘贴代码如下
+    **示例1**
+    ```
+    let data = {
+            module: 'infinitiQuotation',
+            props: {
+                route: '/carDetail',
+                carModelCode: this.store.carModelCode,
+                carModelName: this.store.baseMsg.name
+            }
+        }
+
+        this.route.open("yingfeinidi://open/reactnative", data, (res, ret) => {
+            console.log(res, ret) // 貌似失败了给你res，没有ret，成功了res为null，ret为返回值
+            // 貌似压根没有ret，只有res。。。没有失败这一说
+        })
+    ```
+    ========================
+    **示例2**
+    ```
+    let data = {
+        module: 'order', 
+        props: {
+            route: '/carDetail',
+            carModelCode: this.store.carModelCode,
+            carModalName: this.store.baseMsg.name,
+            mainPic: (this.imgList && this.imgList.length) ? this.imgList[0] : '',
+            goPage: 'orderFromCarDetail'
+            
+        }
+    }
+    this.route.open('yingfeinidi://open/reactnative', data)
+    ```
+    ========================
+    - **说明** data如何接收？
+    - `this.route.params`即代表了data
+    - `props`
+    - `this.props` === `this.route.params`
+
+- this.route.close(params)
+
+- 组件传递同理
+
+- 不出意外，直接 `this.props` || `this.route.params` 指向了props
