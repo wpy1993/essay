@@ -37,25 +37,23 @@
         }
 
         this.route.open("yingfeinidi://open/reactnative", data, (res, ret) => {
-            console.log(res, ret) // 貌似失败了给你res，没有ret，成功了res为null，ret为返回值
-            // 貌似压根没有ret，只有res。。。没有失败这一说
+            console.log(res, ret) // 失败了给你res，没有ret，成功了res为null，ret为返回值
+            
         })
     ```
     ========================
     **示例2**
     ```
-    let data = {
-        module: 'order', 
-        props: {
-            route: '/carDetail',
-            carModelCode: this.store.carModelCode,
-            carModalName: this.store.baseMsg.name,
-            mainPic: (this.imgList && this.imgList.length) ? this.imgList[0] : '',
-            goPage: 'orderFromCarDetail'
-            
-        }
+    let params = {
+        route: '/carDetail',
+        carModelCode: this.store.carModelCode,
+        carModalName: this.store.baseMsg.name,
+        mainPic: (this.imgList && this.imgList.length) ? this.imgList[0] : '',
+        goPage: 'orderFromCarDetail'
     }
-    this.route.open('yingfeinidi://open/reactnative', data)
+    this.route.open('/Follow', params, (res) => {
+        // 打开容器内部的其他页面，res为成功的返回值
+    })
     ```
     ========================
     - **说明** data如何接收？
@@ -68,3 +66,10 @@
 - 组件传递同理
 
 - 不出意外，直接 `this.props` || `this.route.params` 指向了props
+
+
+### 必知
+
+#### Image图片
+> rn不能使用本地图片，需要上传到远程，然后uri调用
+- 远程服务器: `http://sccimg.sqaproxy.souche.com/list?path=/`
