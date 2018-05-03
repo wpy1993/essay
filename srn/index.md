@@ -10,7 +10,7 @@
 #### 公司架构
 - this.route.open(protocol, data, cb)
     - 关于其callback，好坑。。。参数有2， (res, ret) `(可能以后的SRNNative的node包升级和native进行变革会改这个问题吧)`
-    - 如果是打开别的RN容器的某页面，返回的参数在`ret`
+    - 如果是打开别的RN容器的某页面或者是h5页面，返回的参数在`ret`
     - 如果打开的是当前RN容器的其他页面，返回的参数在`res`
 
 #### 开发踩坑
