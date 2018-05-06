@@ -20,3 +20,4 @@
 
 - `ls` **list** 查看当前文件夹下的所有文件/文件夹
 - `mkdir [dirName]` **make directory** 创建文件夹
+

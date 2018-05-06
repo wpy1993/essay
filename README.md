@@ -37,3 +37,9 @@
 
 ### RN开发总结（仅限基于dfc内部框架）
  - [ ] SRN [传送门](srn/index.md)
+
+### linux shell 了解一下
+- [ ] [传送门](linux-shell/index.md)
+
+### mac 一些操作
+- [ ] [传送门](macOS/index.md)
