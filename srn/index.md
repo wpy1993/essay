@@ -20,5 +20,7 @@
 - 键盘弹出时有大片空白，那么解决方案貌似官方的也并不是很友好，可以使用第三方的一个组件`react-native-keyboard-aware-scroll-view`[好人传送门](https://github.com/APSL/react-native-keyboard-aware-scroll-view)
 - Android不支持本地图片的打包。。。（貌似是通病，不是公司架构遗留的问题），所以建议把静态资源放在远程服务器上
 
+- oppo部分机型，在同一个srn容器(基于公司架构)中，page的跳转来回会导致键盘偶尔无法被唤起，解决方案，再page离开之前，做一个modal（宽高为0即可）强制显示然后隐藏。也就是说，让一个modal出现把键盘痕迹强制擦出（如果键盘在，强制关，如果不在，防患于未然）
+
 #### react的坑
 - setState竟然是异步的。。。可以把它看作是setTimeout，支持回调，所以如果需要进行与该state有关的后续操作的话，在cb中进行操作
