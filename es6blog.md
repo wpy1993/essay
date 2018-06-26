@@ -88,6 +88,8 @@
 - <script tpye="module"></script>  `script的module方式默认异步加载`
 - 如果输出有default的话，单纯地`import val from 'a.js'`，默认val == default，如果想要全部的，就`import * as val from 'a.js'`
 
+> export default new Foo()，可以认为拆分成 const foo = new Foo(); export foo; 所以多处import它，得到的是同一个东西！！
+
 ### 21. 编码风格 []
 
 - const > let > var 

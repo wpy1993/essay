@@ -81,7 +81,8 @@
         - `archerWrap`是啥子？
 
 - **initSentry** `params: version, dsn`
-    - set window.console || global.console (诶？rn中有window吗？？？)
+    - 如果是 `产线环境` 或者config中配置了 `disable_console: true`，就用手写的Console代替/干掉window.console :)
+    - 其实，手写的Console中，可以认为暂时对开发者无用（因为没有console.log了）。。。（对业务很有用的，虽然我不知道Raven怎么用的）
 
 ```疑点
 1. SRNApp 和 SRNPage 的关系？constructor 吗？
