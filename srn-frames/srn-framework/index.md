@@ -13,6 +13,9 @@
 
 ---------------------------------------
 
+> 如何才能够通过修改node_modules 里面的东西，进行调试？修改srn-framework 的 src 貌似没有生效 生效了sb，并且不需要重启node   
+> promise 获取 reject, 是第一个then(resolveFun, rejectFun)[YES!], 并非.then(res).then(err)[NO!]
+
 ### SRNPage
 > 额外使用到了 `NavHelper`, `SRNNative`
 
@@ -25,13 +28,17 @@
     - open `params: path, params, callback`
 
         > path打开三种视图，  
-        > not '/' start && http --> webview,    
-        > not '/' start && !http --> new rn module/native module   
-        > '/' start --> other page in current rn module
+        > not '/' start && http --> webview, SRNNative.openWebView    
+        > not '/' start && !http --> new rn module/native module, SRNNative.open   
+        > '/' start --> other Component in current rn module, Navhelper.open
+
+        - 前两种情况, res成功在arguments[1], 失败在arguments[0]
+        - 第三种（打开同一容器其他页面）, res 和 err 都在arguments[0]
         
-        **ps: 貌似cb返回的数据在arguments的位置（0 or 1）不同，记得整理一下 ？？？**
     - close `params: data`
-        > 基本data没有被我使用到，如果想要使用呢？看一下`NavHelper.pop`接收的`argument`如何被使用吧 ？？？
+        > 调用NavHelper.pop, data可选类型: number || object
+
+        - number代表关闭层级，直到层级结束或者是关闭 all `all 不知道是所有的页面还是当前容器的所有页面`
     - reload `come soon`
 
 - **hook** `搭配@LifeCircle使用`
@@ -46,9 +53,10 @@
 
 ```疑点
 1. navigation 最底层的调用？
-2. route 的cb 参数位置貌似不对，或者说和NavHelper.push的cb不同，对比一下？
 3. 新的生命周期 hook，如何真正的嵌入的？
 4. navigator是暴露给外部使用的吗？貌似我没用过，暴露出来的意义何在？
+5. route 里面 path, referrer, params, reload 有什么用？在哪里被重写了吗？
+6. NavHelper.pop(Number)， number的关闭的最多层级，指的是所有的页面，还是当前容器的所有的页面？
 ```
 
 

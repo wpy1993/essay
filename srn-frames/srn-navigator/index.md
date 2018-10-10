@@ -55,3 +55,18 @@
 push中，如果是字符串，就去routeconfig中找
 nowRoutes = this.navState.state.routes 是什么
 lastRoute = nowRoutes的最后一条 || null
+
+### NavigationViewBuilder
+
+> import `NavigationCardStack` `NavigationHeader`  `navUtil(assignItem)` `StaticComponent`  
+> GESTURE_RESPONSE_DISTANCE (gesture_response_distance) = 30  
+> Direction `horizontal` `vertical`
+
+
+
+- B both
+- Navgator
+    |__ NavigationViewBuilder
+    |     |
+    |_____|_ NavigationState
+    |     |_ NavigationCardStack

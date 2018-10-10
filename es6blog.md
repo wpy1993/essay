@@ -76,6 +76,14 @@
 
 ### 18. Class
 
+> 举个栗子, Demo 是类， demoIns 是实例  
+> Demo中，this默认指向demoIns, 但是static的属性/方法 中 , this 指向 Demo
+> static 的属性只能被Demo使用，即使是外界，也要 Demo.staticAttr/ Demo.staticFunc 这样使用
+> 补充，或者在实例 demoIns 中，this.constructor.staticAttr 调用
+
+- class 不会被变量提升
+- class 两种声明方式，函数表达式和声明变量 class Demo [extends] {} || var Demo = class [trueName] [extends] {}
+- Demo.name 是有默认值的，是Demo, 如果是变量声明并且`trueName`存在，就是`trueName`
 
 ### 19. 修饰器
 

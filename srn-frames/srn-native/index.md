@@ -17,8 +17,10 @@
     - popAllAndOpen
     - openWebview
     - openGuideView
+        - `params: []` 内容未知???
     - openDatePicker
     - getContacts
+        - 这里当android和ios表现不一致
     - saveContracts
     - bury
     - log
