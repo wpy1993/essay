@@ -78,6 +78,36 @@
   - {func} printDepTree
 
 
+### types
+
+- dynamicobject  `服务于/api/observable`
+  - getAdm  `获取this.$mobx`
+  - objectProxyTraps  `interface from ProxyHandler`
+  - createDynamicObservableObject  ``
+
+- intercept-utils
+  - hasInterceptors
+  - registerInterceptor `注册一次性拦截器到this.interceptors中， once之后销毁`
+  - interceptChange  `遍历修改this.interceptors中的所有子项`
+
+- listen-utils `服务于/types/observablexxx, 修改值`
+  - hasListener
+  - registerListener
+  - notifyListener `遍历该ovservableValue所有的changeListeners并执行handler`
+
+- modifiers `服务于/types/ovservablexxx`
+  - deepEnhancer
+  - shallowEnhancer
+  - referenceEnhancer
+  - refStructEnhancer
+
+- type-utils
+  - getAtom
+  - getAdministration
+  - getDebugName
+
+- observablexxx  `重写所有的数据类型`
+
 ### utils
 
 - comparer
