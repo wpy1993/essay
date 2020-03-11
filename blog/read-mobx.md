@@ -10,10 +10,10 @@
 
 
 ### 文件结构
-  - api
-  - core 核心概念
-  - types 数据类型
-  - utils 工具
+- api
+- core 核心概念
+- types 数据类型
+- utils 工具
 
 ### 常用功能
 - observable
@@ -23,7 +23,14 @@
 - $mobx
 - globalState
 
-### 核心概念
+### api  (key api)
+- action
+- autorun
+- computed
+- observable
+- observe
+
+### core核心概念
 - action
   - {interface}    `IAction`
   - {func}         `createAction`

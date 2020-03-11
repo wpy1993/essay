@@ -26,6 +26,13 @@
 - nginx -s reload()  `send a signal to a master process: stop quit reopen reload`
 
 
+### 在本地terminal中ssh连接远程服务器
+- 阿里云服务器地址 --> 网络与安全 --> 密钥对 --> 没有就新建 --> (好像没办法直接下载，只能新建密钥对后自动下载pem文件)
+- 本地terminal指令 `chmod 400 <下载的与云服务器关联的私钥的绝对路径>`
+- 本地terminal指令 `ssh -i <下载的与云服务器关联的私钥的绝对路径> <username>@<hostname or IP address>`，输入密码
+- 成功，以后可以通过 `ssh <username>@<hostname or IP address>` 直接连接了
+- 指令 `exit` 退出远程
+
 ### extra
 - `whereis` whereis可以查找安装程序，比如whereis php、whereis nginx
 
