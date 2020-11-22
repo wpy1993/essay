@@ -1,4 +1,4 @@
-## mobx-react
+## mobx-react 阅读
 
 ### core
 
@@ -16,3 +16,11 @@
   - mixinLifecycleEvents
   - Observer
   - ObserverPropsCheck
+
+### core （冲突？）
+- disposeOnUnmount
+- index
+- inject
+- observer
+- propTypes
+- Provider
